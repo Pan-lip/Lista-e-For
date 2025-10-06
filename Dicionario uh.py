@@ -18,3 +18,68 @@ while True:
         print(f"Valor = {cursos_fiap[pesquisa][0]} // Tempo perdido = {cursos_fiap[pesquisa][1]}")
     else:
         print("Curso não encontrado")
+# .keys()  retorna todas as chaves
+# .values() retorna todos os valores
+# .items()  retorna pares (chave, valor)
+# .update({...})  atualiza ou adiciona itens
+# .clear()  limpa o dicionário
+# len(dicionario)  conta quantos pares existem
+# Tupla é uma lista que NÃO pode mudar
+# Usamos quando os dados são fixos
+
+# Criando uma tupla com coordenadas (x, y)
+coordenada = (10, 20)
+
+print("Coordenada completa:", coordenada)  # (10, 20)
+print("Primeiro valor (x):", coordenada[0])  # 10
+print("Segundo valor (y):", coordenada[1])   # 20
+
+# Tupla pode ter vários tipos de dados
+aluno_tupla = ("Ana", 20, "Engenharia")
+print("\nNome do aluno:", aluno_tupla[0])
+print("Idade:", aluno_tupla[1])
+print("Curso:", aluno_tupla[2])
+
+# Desempacotando a tupla em variáveis
+nome, idade, curso = aluno_tupla
+print("\nUsando desempacotamento:")
+print("Nome:", nome)
+print("Idade:", idade)
+print("Curso:", curso)
+
+# ====== DICIONÁRIO ======
+# Dicionário é chave -> valor
+# Usamos quando queremos "mapear" algo
+
+# Criando um dicionário de aluno
+aluno_dict = {
+    "nome": "Ana",
+    "idade": 20,
+    "curso": "Engenharia"
+}
+
+print("\nDicionário do aluno:", aluno_dict)
+
+# Acessando valores pela chave
+print("Nome:", aluno_dict["nome"])
+print("Idade:", aluno_dict["idade"])
+
+# Usando .get() (não dá erro se não existir a chave)
+print("Nota:", aluno_dict.get("nota", "Ainda não cadastrada"))
+
+# Alterando valores
+aluno_dict["idade"] = 21
+print("\nIdade alterada:", aluno_dict)
+
+# Adicionando novos valores
+aluno_dict["nota"] = 9.5
+print("Com a nota adicionada:", aluno_dict)
+
+# Removendo um valor
+aluno_dict.pop("curso")
+print("Removendo curso:", aluno_dict)
+
+# Percorrendo o dicionário
+print("\nPercorrendo chaves e valores:")
+for chave, valor in aluno_dict.items():
+    print(chave, ":", valor)
